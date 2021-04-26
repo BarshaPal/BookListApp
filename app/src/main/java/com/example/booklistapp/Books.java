@@ -9,7 +9,9 @@ public class Books {
     private String ms4;
     private String ms5;
     private String buy;
-    public Books(String s1,String s2,String s3,String s4,String S5,String S6)
+    private String rate;
+
+    public Books(String s1,String s2,String s3,String s4,String S5,String S6,String S7)
     {
         ms1=s1;
         ms2=s2;
@@ -17,6 +19,7 @@ public class Books {
         ms4=s4;
         ms5=S5;
         buy=S6;
+        rate=S7;
     }
 
     public String getMs1() {
@@ -37,5 +40,9 @@ public class Books {
     public String getBuy() {
         return buy;
     }
+    public String getRate() {
+        return rate;
+    }
+
 
 }

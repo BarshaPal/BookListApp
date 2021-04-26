@@ -72,6 +72,7 @@ public class Utils {
                 String page="";
                 String date="";
                 String buy="";
+                String rating="";
                 // Extract the value for the key called "title"
                 String title = volumeInfo.getString("title");
                  if(volumeInfo.has("subtitle"))
@@ -111,8 +112,16 @@ public class Utils {
 
                 // store authors names into a string
                 String authors = authorsName.toString();
+                if(volumeInfo.has("averageRating"))
+                {
+                    rating = volumeInfo.getString("averageRating");
+                }
+                else
+                {
+                    rating="-";
+                }
 
-                Books earthquake = new Books(title,subtitle,authors,date,page,buy);
+                Books earthquake = new Books(title,subtitle,authors,date,page,buy,rating);
                 earthquakes.add(earthquake);
             }
 

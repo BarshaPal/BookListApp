@@ -45,6 +45,8 @@ public class BookAdapter extends ArrayAdapter<Books> {
             publisher.setText(currentword.getMs3());
             TextView page = (TextView) listItemView.findViewById(R.id.idTVNoOfPages);
             page.setText(currentword.getMs5());
+            TextView rate = (TextView) listItemView.findViewById(R.id.rate);
+            rate.setText(currentword.getRate());
         }
         return listItemView;
 
